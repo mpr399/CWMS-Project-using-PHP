@@ -1,8 +1,8 @@
 <?php 
 // DB credentials.
-define('DB_HOST','localhost');
+define('DB_HOST','cwmsdb-server');
 define('DB_USER','root');
-define('DB_PASS','');
+define('DB_PASS','Mpr@399');
 define('DB_NAME','cwmsdb');
 // Establish database connection.
 try
