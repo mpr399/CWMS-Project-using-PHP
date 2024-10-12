@@ -1,0 +1,22 @@
+version: '3.9'
+services:
+  cwmsdb-server:
+    container_name: cwmsdb-server
+    image: mvpar/cwmsdb
+    ports:
+      - "3325:3306"
+    volumes:
+      - cwmsdbdata:/var/lib/mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=Mpr@399
+
+  cwmsapp:
+    container_name: cwmsapp
+    image: mvpar/cwmsapp
+    ports:
+      - "8025:80"
+    volumes: 
+      - cwmsappdata:/var/www/html
+volumes:
+  cwmsdbdata: {}
+  cwmsappdata: {}
